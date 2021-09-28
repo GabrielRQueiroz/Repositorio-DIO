@@ -57,7 +57,7 @@ header .list-items {
 .greet {
    height: 100vh;
    align-items: center;
-   justify-content: space-between;
+   justify-content: space-evenly;
 }
 
 .greet .greet-text {
@@ -86,7 +86,7 @@ header .list-items {
 #quem-somos {
    flex-direction: row-reverse;
    align-items: center;
-   justify-content: space-between;
+   justify-content: space-evenly;
 }
 
 #quem-somos h2 {
@@ -98,15 +98,21 @@ header .list-items {
 
 #quem-somos h2::before {
    content: "";
+   height: 1.2em;
    width: 5px;
-   margin-right: 5px;
+   margin-right: 10px;
    background-color: var(--bluecolor);
    position: relative;
+   transform: translateY(-5%);
 }
 
 #quem-somos p {
    margin-bottom: 10px;
-   width: 90%;
+   width: 100%;
+}
+
+.who-text {
+   max-width: 50%;
 }
 
 .out-container {
@@ -116,7 +122,9 @@ header .list-items {
 
 #services {
    flex-direction: column;
-   padding: 50px 0 100px;
+   padding: 50px 50px 100px;
+   box-sizing: border-box;
+   
 }
 
 #services h2 {
@@ -164,7 +172,8 @@ header .list-items {
 #planos {
    flex-direction: column;
    min-height: 100vh;
-   padding-top: 50px;
+   padding: 50px 25px 0;
+   box-sizing: border-box;
 }
 
 #planos h2 {
@@ -257,6 +266,7 @@ footer .footer {
    }
 
    header .menu ul {
+      margin-top: 10px;
       position: relative;
       left: 50%;
       transform: translateX(-50%);
@@ -268,19 +278,40 @@ footer .footer {
 
    .greet .greet-text {
       width: 100%;
+      text-align: center;
+   }
+
+   .greet .greet-text a{
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
    }
 
    #quem-somos {
       flex-direction: column-reverse;
+      margin: 20px 0 40px;
    }
 
    #quem-somos img {
-      min-width: 320px;
+      max-width: 550px;
       margin: auto;
+   }
+
+   #quem-somos .who-text {
+      max-width: 600px;
+      padding: 20px;
    }
 
    .service-list {
       flex-direction: column;
+   }
+
+   .service-item {
+      margin-bottom: 50px;
+   }
+
+   .service-item:last-child {
+      margin-bottom: 0;
    }
 
    .service-item img {
@@ -299,5 +330,9 @@ footer .footer {
       margin: auto;
       width: 100%;
       margin-bottom: 20px;
+   }
+
+   footer .footer {
+      margin: 0 20px;
    }
 }
