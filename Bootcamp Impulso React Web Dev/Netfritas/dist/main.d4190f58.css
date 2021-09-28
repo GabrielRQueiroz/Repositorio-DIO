@@ -1,0 +1,157 @@
+/* Variables */
+
+:root {
+   --red: #E50914;
+   --fullBlack: #000;
+   --black: #121212; /* For navbars */
+   --darkGray: #1A1A1A; /* For text boxes */
+   --gray: #424242; /* For less important buttons */
+   --lightGray: #8C8787; /* For navbar text */
+   --evenLighterGray: #C4C4C4; /* For buttons and secondary text */
+   --white: #fff;
+}
+
+/* Predefined styles */
+
+.title {
+   font-style: normal;
+   font-weight: 700;
+   font-size: 1.2rem;
+}
+
+.btn {
+   border: 0;
+   border-radius: .2rem;
+   background-color: var(--evenLighterGray);
+   font-size: .9rem;
+   font-weight: 700;
+
+   padding: 1rem 1.5rem;
+
+   cursor: pointer;
+
+   transition: 500ms ease all;
+}
+
+/* Style */
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background-color: var(--fullBlack);
+   font-family: 'Source Sans Pro', sans-serif;
+   color: var(--white);
+}
+
+header {
+   padding: 20px 0;
+   background-color: var(--black);
+}
+
+header .container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+header .logo {
+   color: var(--red);
+   font-family: 'Arial Black', Times;
+   font-size: 2rem;
+   margin-left: 2rem;
+}
+
+header .navbar {
+   display: flex;
+}
+
+header .navbar a{
+   color: var(--lightGray);
+
+   text-decoration: none;
+   
+   text-align: center;
+
+   margin-right: 2rem;
+
+   transition: 250ms ease all;
+}
+
+header .navbar a:last-child{
+   margin-right: 3em;
+}
+
+header .navbar a:hover {
+   color: var(--white);
+}
+
+header .navbar a i{
+   font-size: 1.5em;
+}
+
+/* Highlighted */
+
+main .highlight {
+   background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 90%, #000 100%), url("/film00001.531f3bbe.png");
+   background-size: cover;
+   background-position: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   height: 75vh;
+}
+
+main .highlight .container {
+   width: 70vw;
+
+   margin-left: 3rem;
+}
+
+main .highlight .title {
+   font-size: 3em;
+   line-height: 3rem;
+   margin-bottom: 1rem;
+}
+
+main .highlight .description {
+   margin-bottom: 1.5em;
+}
+
+#play {
+
+}
+
+#play i {
+   padding-right: 0.5rem;
+}
+
+#play .btn-play {
+   margin-right: 1.5rem;
+
+}
+
+#play .btn-info {
+
+}
+
+#play .btn {
+   background-color: rgba(0, 0, 0, .4);
+   color: var(--white);
+   
+   opacity: 80%;
+
+}
+
+#play .btn:hover {
+   background-color: var(--white);
+   color: var(--black);
+
+   opacity: 100%;
+}
+
+/*# sourceMappingURL=/main.d4190f58.css.map */
