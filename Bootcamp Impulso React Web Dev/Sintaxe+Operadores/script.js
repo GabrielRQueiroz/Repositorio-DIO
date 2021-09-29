@@ -12,12 +12,8 @@ function compareNumbers(x, y) {
    let equals = x==y;
    let sum = x+y;
 
-   let compareTo10 = "";
-   let compareTo20 = "";
-
    let case1 = ""
    let case2 = `Their sum equals ${sum}. `; 
-   // It means it is ${compareTo10} than 10 and ${compareTo20} than 20.
 
    equals === true ? case1 = `The numbers ${x} and ${y} are the same. ` : case1 = `The numbers ${x} and ${y} are NOT the same. `;
    
