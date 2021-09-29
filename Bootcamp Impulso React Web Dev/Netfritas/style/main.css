@@ -120,6 +120,10 @@ header {
    background-color: var(--black);
 }
 
+header a {
+   text-decoration: none;
+}
+
 header .container {
    display: flex;
    justify-content: space-between;
@@ -159,6 +163,10 @@ header .navbar a:hover {
 
 header .navbar a i{
    font-size: 1.5em;
+}
+
+header #mini-logo {
+   display: none;
 }
 
 /* Highlighted */
@@ -265,23 +273,104 @@ main .highlight .description {
    margin-bottom: 5vh;
 }
 
+#home .explorer .item {
+   position: relative;
+
+   top: 0;
+   left: 0;
+
+   cursor: pointer;
+}
+
+#home .explorer .item .title {
+   text-align: center;
+   padding: 0 1rem;
+}
+
+#home .explorer .owl-carousel img {
+   position: relative;
+
+   top: 0;
+   left: 0;
+}
+
+#home .explorer .item-description {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: left;
+
+   font-size: 1.2rem;
+
+   justify-content: space-between;
+
+   background-color: rgba(0, 0, 0, 0.6);
+   opacity: 0;
+
+   padding: 15% 5% 0;
+   position: absolute;
+   
+   left: 0;
+   bottom: 0;
+
+   height: 100%;
+   width: 100%;
+
+   z-index: 50;
+
+   transition: 500ms ease all;
+}
+
+
+#home .explorer .item:hover .item-description {
+   opacity: 1;
+}
+
+#home .explorer .item-description .buttons {
+   bottom: 5%;
+   position: relative;
+
+   justify-self: flex-end;
+
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.buttons .icon {
+   margin: 0 15%;
+   transition: color 500ms;
+}
+
+.buttons .icon:hover {       
+   color: var(--lightGray);
+}
+
+.item-description .arrow {
+   font-size: 1.5em;
+}
+
 /* Media queries */
 
 @media (max-width: 700px) {
-   header {
-      height: 50%;
-   }
 
-   header .logo {
+   header #full-logo {
+      position: absolute;
+
+
       display: none;
    }
 
    header .container {
-      justify-content: center;
+      left: -5%;
+
+      position: relative;
+
+      justify-content: space-around;
    }
 
    header .navbar {
-      justify-content: space-around;
+      align-items: center;
+      justify-content: center;
    }
 
    header .navbar a {
@@ -291,6 +380,11 @@ main .highlight .description {
    header .navbar a:last-child {
       margin: 0;
    }
+
+   header #mini-logo {
+      margin: 0 2vw;
+      display: inherit;
+   }  
 
    main .highlight {
       justify-content: center;
@@ -304,7 +398,7 @@ main .highlight .description {
    main .highlight .container {
       margin-left: 0;
       width: 90vw;
-      transform: scale(80%);
+      transform: scale(90%);
    }
 
    #play {
@@ -314,5 +408,19 @@ main .highlight .description {
 
    #play button {
       font-size: 0.8rem;
+   }
+
+   #home .explorer .item-description {
+      padding: 0.6em 0;
+      font-size: 1rem;
+   }
+
+   #home .explorer .item-description .title {
+      font-size: 1rem;
+   }
+
+
+   #home .item-description p {
+      display: none;
    }
 }
