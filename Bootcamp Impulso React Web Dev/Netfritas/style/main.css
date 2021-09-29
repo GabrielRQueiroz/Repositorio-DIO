@@ -16,7 +16,7 @@
 .title {
    font-style: normal;
    font-weight: 700;
-   font-size: 1.2rem;
+   font-size: 1.3rem;
 }
 
 .btn {
@@ -33,12 +33,80 @@
    transition: 500ms ease all;
 }
 
+.hidden {
+   display: none;
+}
+
+.owl-theme .owl-dots {
+   display: none;
+}
+
+/* Scroll indicator */
+
+.scroll-down.arrows span {
+   position: absolute;
+   display: inline-block;
+   top: 20px;
+   height: 25px;
+   width: 2px;
+   left: calc(50% - 1px);
+   animation: animateArrows 1.25s infinite linear;
+}
+
+@keyframes animateArrows {
+   0%, 40%, 100% {
+      opacity: 0;
+   }
+   75% {
+      opacity: 1;
+   }
+}
+
+.scroll-down.arrows span:first-child {
+   top: 35px;
+   animation-delay: 0s;
+}
+
+.scroll-down.arrows span:nth-child(2) {
+   top: 35px;
+   animation-delay: .33s;
+}
+
+.scroll-down.arrows span:last-child {
+   top:  50px;
+   animation-delay: .66s;
+}
+
+.scroll-down.arrows span::before, .scroll-down.arrows span::after {
+   position: absolute;
+   content: "";
+   width: 3px;
+   height: 100%;
+   top: 0;
+   left: 0;
+   background: #fff;
+   border-radius: 3px;
+}
+
+.scroll-down.arrows span::before {
+   transform-origin: bottom;
+   transform: rotate(-45deg);
+}
+
+.scroll-down.arrows span::after {
+   transform-origin: bottom;
+   margin-left: -1px;
+   transform: rotate(45deg);
+}
+
 /* Style */
 
 * {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+
+   scroll-behavior: smooth;
 }
 
 body {
@@ -107,7 +175,7 @@ main .highlight {
 }
 
 main .highlight .container {
-   width: 70vw;
+   width: 60vw;
 
    margin-left: 3rem;
 }
@@ -152,4 +220,99 @@ main .highlight .description {
    color: var(--black);
 
    opacity: 100%;
+}
+
+/* Carrousels */
+
+#home {
+   position: relative;
+
+   margin-top: 10vh;
+
+   height: 100%;
+   width: 100%;
+}
+
+#home .darken {
+   box-shadow: inset 0 0 20px 15px var(--fullBlack);
+   z-index: 50;
+
+   position: absolute;
+
+   pointer-events: none;
+
+   width: 100%;
+   height: 100%;
+}
+
+#scroll {
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+
+   top: -15vh;
+}
+
+#home .title {
+   padding: 1rem 2rem;
+}
+
+#home .explorer {
+   padding-bottom: 5vh;
+}
+
+#film-row {
+   margin-bottom: 5vh;
+}
+
+/* Media queries */
+
+@media (max-width: 700px) {
+   header {
+      height: 50%;
+   }
+
+   header .logo {
+      display: none;
+   }
+
+   header .container {
+      justify-content: center;
+   }
+
+   header .navbar {
+      justify-content: space-around;
+   }
+
+   header .navbar a {
+      font-size: 0.9rem;
+   }
+
+   header .navbar a:last-child {
+      margin: 0;
+   }
+
+   main .highlight {
+      justify-content: center;
+      align-items: center;
+   }
+
+   main .highlight .title {
+      font-size: 2.5rem;
+   }
+
+   main .highlight .container {
+      margin-left: 0;
+      width: 90vw;
+      transform: scale(80%);
+   }
+
+   #play {
+      display: flex;
+      flex-wrap: nowrap;
+   }
+
+   #play button {
+      font-size: 0.8rem;
+   }
 }
