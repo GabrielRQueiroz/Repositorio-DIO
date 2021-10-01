@@ -5,7 +5,7 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <title>NETFRITAS</title>
-      <meta name="description" content="">
+      <meta name="description" content="Sua plataforma de streaming amigável. Feita para alegrar sua criança">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="/main.d4190f58.css">
       
@@ -16,17 +16,63 @@
       <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
 
       <!-- Owl Carrousel CSS -->
-      <link rel="stylesheet" href="/owl.theme.default.min.2f49c1c2.css">
       <link rel="stylesheet" href="/owl.carousel.min.43b85c4a.css">
+      <link rel="stylesheet" href="/owl.theme.default.min.2f49c1c2.css">
       
-   <script src="/main.d4190f58.js"></script><script src="/owl.theme.default.min.2f49c1c2.js"></script><script src="/owl.carousel.min.43b85c4a.js"></script></head>
+   <script src="/main.d4190f58.js"></script><script src="/owl.carousel.min.43b85c4a.js"></script><script src="/owl.theme.default.min.2f49c1c2.js"></script></head>
    <body>
+
+      <div class="popup hidden">
+
+         <div class="play">
+            <div class="thumb">
+               <i class="far fa-play-circle"></i>
+            </div>
+         </div>
+
+         <div class="container">
+
+            <h2 class="title"> Bob Esponja: Um herói fora d'água </h2>
+
+            <div class="buttons">
+
+               <div class="button">
+                  <i class="fas fa-plus-circle"></i> 
+                  <b>Adicionar à lista</b>
+               </div>
+
+               <div class="button" id="green">
+                  <i class="fas fa-smile-beam"></i>
+                  <b>Gostei</b>
+               </div>
+
+               <div class="button" id="red">
+                  <i class="fas fa-frown"></i> 
+                  <b>Não gostei</b>
+               </div>
+
+            </div>
+
+            <div>
+
+            <p class="description">
+               Elit ea elit ad deserunt. Lorem nulla Lorem excepteur minim dolor do officia in ullamco aliqua non. Laborum culpa culpa sit id consequat amet amet ipsum cupidatat duis. Aliquip officia mollit sit Lorem dolore sunt. Laborum exercitation adipisicing sunt magna amet cupidatat aute.
+            </p>
+
+         </div>
+
+         </div>
+
+      </div>
       
       <header>
 
          <div class="container">
-            <h2 class="logo">NETFRITAS</h2>
             
+            <a href="#"><h2 class="logo" id="full-logo">NETFRITAS</h2></a>
+            
+            <a href="#"><h2 class="logo" id="mini-logo">N</h2></a>
+
             <nav class="navbar">
                <a href="">
                   <i class="fas fa-home"></i><br>
@@ -66,7 +112,7 @@
             
                <div id="play">
                   <button role="button" class="btn btn-play"><i class="fas fa-play"></i> ASSISTIR</button>
-                  <button role="button" class="btn btn-info"><i class="fas fa-plus"></i> INFORMAÇÕES</button>
+                  <button role="button" onclick="popUp()" class="btn btn-info"><i class="fas fa-plus"></i> INFORMAÇÕES</button>
                </div>
 
             </div>
@@ -74,13 +120,637 @@
          </div>
          
          <div id="home">
+
+            <a href="#home" class="scroll-down arrows" id="scroll">
+               <label class="hidden">Scroll</label>
+               <span></span>
+               <span></span>
+               <span></span>
+             </a>
             
             <div class="explorer">
+               <div class="darken"></div>
 
-               <div class="owl-carousel owl-theme">
+               <h3 class="title"> Filmes populares </h3>
+               <div class="owl-carousel owl-theme" id="film-row">
+
                   <div class="item">
-                     <img src="/film00002.29d56885.jpg" alt="" srcset="">
+                     <div class="item-description">
+                        
+                        
+                        <h4 class="title">Trolls</h4>
+                        <p>
+                           
+                           <b>Ano:</b> Lorem <br>
+                           <b>Duração:</b> ipsum <br>
+
+                           <br>
+
+                           <div class="buttons">
+                              <i class="fas fa-plus-circle icon"></i>
+                              <i class="fas fa-thumbs-up icon"></i>
+                              <i class="fas fa-thumbs-down icon"></i>
+                           </div>
+
+                           <i class="fas fa-chevron-down arrow"></i>
+
+                        </p>
+
+                     </div>
+                     <img src="/film00002.29d56885.jpg" alt="Trolls" srcset="">
                   </div>
+
+                  <div class="item">
+                     <div class="item-description">
+                        
+                        
+                        <h4 class="title">Raya e o Último Dragão</h4>
+                        <p>
+                           
+                           <b>Ano:</b> Lorem <br>
+                           <b>Duração:</b> ipsum <br>
+
+                           <br>
+
+                           <div class="buttons">
+                              <i class="fas fa-plus-circle icon"></i>
+                              <i class="fas fa-thumbs-up icon"></i>
+                              <i class="fas fa-thumbs-down icon"></i>
+                           </div>
+
+                           <i class="fas fa-chevron-down arrow"></i>
+
+                        </p>
+
+                     </div>
+                     <img src="/film00003.bfd2f975.jpg" alt="Raya e o Último Dragão" srcset="">
+                  </div>
+
+                  <div class="item">
+                     <div class="item-description">
+                        
+                        
+                        <h4 class="title">Bob Esponja O Incrível Resgate</h4>
+                        <p>
+                           
+                           <b>Ano:</b> Lorem <br>
+                           <b>Duração:</b> ipsum <br>
+
+                           <br>
+
+                           <div class="buttons">
+                              <i class="fas fa-plus-circle icon"></i>
+                              <i class="fas fa-thumbs-up icon"></i>
+                              <i class="fas fa-thumbs-down icon"></i>
+                           </div>
+
+                           <i class="fas fa-chevron-down arrow"></i>
+
+                        </p>
+
+                     </div>
+                     <img src="/film00004.e35d5d49.jpg" alt="Bob Esponja - O Incrível Resgate" srcset="">
+                  </div>
+
+                  <div class="item">
+                     <div class="item-description">
+                        
+                        
+                        <h4 class="title">Os Croods 2 Uma Nova Era</h4>
+                        <p>
+                           
+                           <b>Ano:</b> Lorem <br>
+                           <b>Duração:</b> ipsum <br>
+
+                           <br>
+
+                           <div class="buttons">
+                              <i class="fas fa-plus-circle icon"></i>
+                              <i class="fas fa-thumbs-up icon"></i>
+                              <i class="fas fa-thumbs-down icon"></i>
+                           </div>
+
+                           <i class="fas fa-chevron-down arrow"></i>
+
+                        </p>
+
+                     </div>
+                     <img src="/film00005.4a6a2b65.jpg" alt="Os Croods 2 - Uma Nova Era" srcset="">
+                  </div>
+
+                  <div class="item">
+                     <div class="item-description">
+                        
+                        
+                        <h4 class="title">The Loud House <br> O Filme</h4>
+                        <p>
+                           
+                           <b>Ano:</b> Lorem <br>
+                           <b>Duração:</b> ipsum <br>
+
+                           <br>
+
+                           <div class="buttons">
+                              <i class="fas fa-plus-circle icon"></i>
+                              <i class="fas fa-thumbs-up icon"></i>
+                              <i class="fas fa-thumbs-down icon"></i>
+                           </div>
+
+                           <i class="fas fa-chevron-down arrow"></i>
+
+                        </p>
+
+                     </div>
+                     <img src="/film00006.dc3c0636.jpg" alt="The Loud House - O Filme" srcset="">
+                  </div>
+
+                  <div class="item">
+                     <div class="item-description">
+                        
+                        
+                        <h4 class="title">Miraculous World</h4>
+                        <p>
+                           
+                           <b>Ano:</b> Lorem <br>
+                           <b>Duração:</b> ipsum <br>
+
+                           <br>
+
+                           <div class="buttons">
+                              <i class="fas fa-plus-circle icon"></i>
+                              <i class="fas fa-thumbs-up icon"></i>
+                              <i class="fas fa-thumbs-down icon"></i>
+                           </div>
+
+                           <i class="fas fa-chevron-down arrow"></i>
+
+                        </p>
+
+                     </div>
+                     <img src="/film00007.4738e7af.jpg" alt="Miraculous World - Nova Iorque, Heróis Unidos" srcset="">
+                  </div>
+
+                  <div class="item">
+                     <div class="item-description">
+                        
+                        
+                        <h4 class="title">Patrulha Canina <br> O Filme</h4>
+                        <p>
+                           
+                           <b>Ano:</b> Lorem <br>
+                           <b>Duração:</b> ipsum <br>
+
+                           <br>
+
+                           <div class="buttons">
+                              <i class="fas fa-plus-circle icon"></i>
+                              <i class="fas fa-thumbs-up icon"></i>
+                              <i class="fas fa-thumbs-down icon"></i>
+                           </div>
+
+                           <i class="fas fa-chevron-down arrow"></i>
+
+                        </p>
+
+                     </div>
+                     <img src="/film00008.be9503bc.jpg" alt="Patrulha Canina - O Filme" srcset="">
+                  </div>
+
+                  <div class="item">
+                     <div class="item-description">
+                        
+                        
+                        <h4 class="title">Tom & Jerry O Filme</h4>
+                        <p>
+                           
+                           <b>Ano:</b> Lorem <br>
+                           <b>Duração:</b> ipsum <br>
+
+                           <br>
+
+                           <div class="buttons">
+                              <i class="fas fa-plus-circle icon"></i>
+                              <i class="fas fa-thumbs-up icon"></i>
+                              <i class="fas fa-thumbs-down icon"></i>
+                           </div>
+
+                           <i class="fas fa-chevron-down arrow"></i>
+
+                        </p>
+
+                     </div>
+                     <img src="/film00009.0af05c70.jpg" alt="Tom & Jerry - O Filme" srcset="">
+                  </div>
+
+                  <div class="item">
+                     <div class="item-description">
+                        
+                        
+                        <h4 class="title">Soul</h4>
+                        <p>
+                           
+                           <b>Ano:</b> Lorem <br>
+                           <b>Duração:</b> ipsum <br>
+
+                           <br>
+
+                           <div class="buttons">
+                              <i class="fas fa-plus-circle icon"></i>
+                              <i class="fas fa-thumbs-up icon"></i>
+                              <i class="fas fa-thumbs-down icon"></i>
+                           </div>
+
+                           <i class="fas fa-chevron-down arrow"></i>
+
+                        </p>
+
+                     </div>
+                     <img src="/film00010.79b9232a.jpg" alt="Soul - Uma Aventura com Alma" srcset="">
+                  </div>
+
+                  <div class="item">
+                     <div class="item-description">
+                        
+                        
+                        <h4 class="title">Pedro Coelho 2 <br> O Fugitivo</h4>
+                        <p>
+                           
+                           <b>Ano:</b> Lorem <br>
+                           <b>Duração:</b> ipsum <br>
+
+                           <br>
+
+                           <div class="buttons">
+                              <i class="fas fa-plus-circle icon"></i>
+                              <i class="fas fa-thumbs-up icon"></i>
+                              <i class="fas fa-thumbs-down icon"></i>
+                           </div>
+
+                           <i class="fas fa-chevron-down arrow"></i>
+
+                        </p>
+
+                     </div>
+                     <img src="/film00011.1c010c21.jpg" alt="Pedro Coelho 2 - O Fugitivo" srcset="">
+                  </div>
+
+                  <div class="item">
+                     <div class="item-description">
+                        
+                        
+                        <h4 class="title">O Poderoso Chefinho 2</h4>
+                        <p>
+                           
+                           <b>Ano:</b> Lorem <br>
+                           <b>Duração:</b> ipsum <br>
+
+                           <br>
+
+                           <div class="buttons">
+                              <i class="fas fa-plus-circle icon"></i>
+                              <i class="fas fa-thumbs-up icon"></i>
+                              <i class="fas fa-thumbs-down icon"></i>
+                           </div>
+
+                           <i class="fas fa-chevron-down arrow"></i>
+
+                        </p>
+
+                     </div>
+                     <img src="/film00012.88ef962e.jpg" alt="O Poderoso Chefinho 2 - Negócios da Família" srcset="">
+                  </div>
+
+                  <div class="item">
+                     <div class="item-description">
+                        
+                        
+                        <h4 class="title">22 Contra a Terra</h4>
+                        <p>
+                           
+                           <b>Ano:</b> Lorem <br>
+                           <b>Duração:</b> ipsum <br>
+
+                           <br>
+
+                           <div class="buttons">
+                              <i class="fas fa-plus-circle icon"></i>
+                              <i class="fas fa-thumbs-up icon"></i>
+                              <i class="fas fa-thumbs-down icon"></i>
+                           </div>
+
+                           <i class="fas fa-chevron-down arrow"></i>
+
+                        </p>
+
+                     </div>
+                     <img src="/film00013.3bef4d1a.jpg" alt="22 Contra a Terra" srcset="">
+                  </div>
+
+               </div>
+
+               <h3 class="title"> Séries populares </h3>
+               <div class="owl-carousel owl-theme" id="serie-row">
+
+                  <div class="item">
+                     <div class="item-description">
+
+                        <h4 class="title">Peppa Pig</h4>
+                        <p>
+                           
+                           <b>Ano:</b> Lorem <br>
+                           <b>Episódios:</b> ipsum <br>
+
+                           <br>
+
+                           <div class="buttons">
+                              <i class="fas fa-plus-circle icon"></i>
+                              <i class="fas fa-thumbs-up icon"></i>
+                              <i class="fas fa-thumbs-down icon"></i>
+                           </div>
+
+                           <i class="fas fa-chevron-down arrow"></i>
+
+                        </p>
+
+                     </div>
+                     <img src="/serie00001.b28da015.jpg" alt="Peppa Pig" srcset="">
+                  </div>
+
+                  <div class="item">
+                     <div class="item-description">
+
+                        <h4 class="title">Gravity Falls</h4>
+                        <p>
+                           
+                           <b>Ano:</b> Lorem <br>
+                           <b>Episódios:</b> ipsum <br>
+
+                           <br>
+
+                           <div class="buttons">
+                              <i class="fas fa-plus-circle icon"></i>
+                              <i class="fas fa-thumbs-up icon"></i>
+                              <i class="fas fa-thumbs-down icon"></i>
+                           </div>
+
+                           <i class="fas fa-chevron-down arrow"></i>
+
+                        </p>
+
+                     </div>
+                     <img src="/serie00002.3aa8472f.jpg" alt="Gravity Falls - Um verão de Mistérios" srcset="">
+                  </div>
+
+                  <div class="item">
+                     <div class="item-description">
+
+                        <h4 class="title">Ben 10</h4>
+                        <p>
+                           
+                           <b>Ano:</b> Lorem <br>
+                           <b>Episódios:</b> ipsum <br>
+
+                           <br>
+
+                           <div class="buttons">
+                              <i class="fas fa-plus-circle icon"></i>
+                              <i class="fas fa-thumbs-up icon"></i>
+                              <i class="fas fa-thumbs-down icon"></i>
+                           </div>
+
+                           <i class="fas fa-chevron-down arrow"></i>
+
+                        </p>
+
+                     </div>
+                     <img src="/serie00003.de778239.jpg" alt="Ben 10" srcset="">
+                  </div>
+
+                  <div class="item">
+                     <div class="item-description">
+
+                         <h4 class="title">Patrulha Canina</h4>
+                        <p>
+                           
+                           <b>Ano:</b> Lorem <br>
+                           <b>Episódios:</b> ipsum <br>
+
+                           <br>
+
+                           <div class="buttons">
+                              <i class="fas fa-plus-circle icon"></i>
+                              <i class="fas fa-thumbs-up icon"></i>
+                              <i class="fas fa-thumbs-down icon"></i>
+                           </div>
+
+                           <i class="fas fa-chevron-down arrow"></i>
+
+                        </p>
+
+                     </div>
+                     <img src="/serie00004.27b1943a.jpg" alt="Patrulha Canina" srcset="">
+                  </div>
+
+                  <div class="item">
+                     <div class="item-description">
+
+                        <h4 class="title">Ultimate Homem-Aranha</h4>
+                        <p>
+                           
+                           <b>Ano:</b> Lorem <br>
+                           <b>Episódios:</b> ipsum <br>
+
+                           <br>
+
+                           <div class="buttons">
+                              <i class="fas fa-plus-circle icon"></i>
+                              <i class="fas fa-thumbs-up icon"></i>
+                              <i class="fas fa-thumbs-down icon"></i>
+                           </div>
+
+                           <i class="fas fa-chevron-down arrow"></i>
+
+                        </p>
+
+                     </div>
+                     <img src="/serie00005.dc643db7.jpg" alt="Ultimate Homem-Aranha" srcset="">
+                  </div>
+
+                  <div class="item">
+                     <div class="item-description">
+
+                        <h4 class="title">Tom & Jerry</h4>
+                        <p>
+                           
+                           <b>Ano:</b> Lorem <br>
+                           <b>Episódios:</b> ipsum <br>
+
+                           <br>
+
+                           <div class="buttons">
+                              <i class="fas fa-plus-circle icon"></i>
+                              <i class="fas fa-thumbs-up icon"></i>
+                              <i class="fas fa-thumbs-down icon"></i>
+                           </div>
+
+                           <i class="fas fa-chevron-down arrow"></i>
+
+                        </p>
+
+                     </div>
+                     <img src="/serie00006.86dc53d4.jpg" alt="Tom & Jerry" srcset="">
+                  </div>
+
+                  <div class="item">
+                     <div class="item-description">
+
+                        <h4 class="title">Jurassic Park</h4>
+                        <p>
+                           
+                           <b>Ano:</b> Lorem <br>
+                           <b>Episódios:</b> ipsum <br>
+
+                           <br>
+
+                           <div class="buttons">
+                              <i class="fas fa-plus-circle icon"></i>
+                              <i class="fas fa-thumbs-up icon"></i>
+                              <i class="fas fa-thumbs-down icon"></i>
+                           </div>
+
+                           <i class="fas fa-chevron-down arrow"></i>
+
+                        </p>
+
+                     </div>
+                     <img src="/serie00007.437f12d1.jpg" alt="Jurassic Park - Acampamento Jurássico" srcset="">
+                  </div>
+
+                  <div class="item">
+                     <div class="item-description">
+
+                        <h4 class="title">Ursos sem Curso</h4>
+                        <p>
+                           
+                           <b>Ano:</b> Lorem <br>
+                           <b>Episódios:</b> ipsum <br>
+
+                           <br>
+
+                           <div class="buttons">
+                              <i class="fas fa-plus-circle icon"></i>
+                              <i class="fas fa-thumbs-up icon"></i>
+                              <i class="fas fa-thumbs-down icon"></i>
+                           </div>
+
+                           <i class="fas fa-chevron-down arrow"></i>
+
+                        </p>
+
+                     </div>
+                     <img src="/serie00008.c4285189.jpg" alt="Ursos Sem Curso" srcset="">
+                  </div>
+
+                  <div class="item">
+                     <div class="item-description">
+
+                        <h4 class="title">Rugrats</h4>
+                        <p>
+                           
+                           <b>Ano:</b> Lorem <br>
+                           <b>Episódios:</b> ipsum <br>
+
+                           <br>
+
+                           <div class="buttons">
+                              <i class="fas fa-plus-circle icon"></i>
+                              <i class="fas fa-thumbs-up icon"></i>
+                              <i class="fas fa-thumbs-down icon"></i>
+                           </div>
+
+                           <i class="fas fa-chevron-down arrow"></i>
+
+                        </p>
+
+                     </div>
+                     <img src="/serie00009.c979c4db.jpg" alt="Rugrats" srcset="">
+                  </div>
+
+                  <div class="item">
+                     <div class="item-description">
+
+                        <h4 class="title">Miraculous</h4>
+                        <p>
+                           
+                           <b>Ano:</b> Lorem <br>
+                           <b>Episódios:</b> ipsum <br>
+
+                           <br>
+
+                           <div class="buttons">
+                              <i class="fas fa-plus-circle icon"></i>
+                              <i class="fas fa-thumbs-up icon"></i>
+                              <i class="fas fa-thumbs-down icon"></i>
+                           </div>
+
+                           <i class="fas fa-chevron-down arrow"></i>
+
+                        </p>
+
+                     </div>
+                     <img src="/serie00010.d3dfbeb3.jpg" alt="Miraculous - As Aventuras de Ladybug" srcset="">
+                  </div>
+
+                  <div class="item">
+                     <div class="item-description">
+
+                        <h4 class="title">Marvel Spidey</h4>
+                        <p>
+                           
+                           <b>Ano:</b> Lorem <br>
+                           <b>Episódios:</b> ipsum <br>
+
+                           <br>
+
+                           <div class="buttons">
+                              <i class="fas fa-plus-circle icon"></i>
+                              <i class="fas fa-thumbs-up icon"></i>
+                              <i class="fas fa-thumbs-down icon"></i>
+                           </div>
+
+                           <i class="fas fa-chevron-down arrow"></i>
+
+                        </p>
+
+                     </div>
+                     <img src="/serie00011.bf6fffca.jpg" alt="Spidey - Amigos Espetaculares" srcset="">
+                  </div>
+
+                  <div class="item">
+                     <div class="item-description">
+
+                        <h4 class="title">A Casa do Mickey Mouse</h4>
+                        <p>
+                           
+                           <b>Ano:</b> Lorem <br>
+                           <b>Episódios:</b> ipsum <br>
+
+                           <br>
+
+                           <div class="buttons">
+                              <i class="fas fa-plus-circle icon"></i>
+                              <i class="fas fa-thumbs-up icon"></i>
+                              <i class="fas fa-thumbs-down icon"></i>
+                           </div>
+
+                           <i class="fas fa-chevron-down arrow"></i>
+
+                        </p>
+
+                     </div>
+                     <img src="/serie00012.6eacb825.jpg" alt="A casa do Mickey Mouse da Disney" srcset="">
+                  </div>
+
                </div>
 
             </div>
@@ -99,6 +769,7 @@
       <!-- Owl JS -->
       <script src="/jquery.min.f12eccec.js"></script>
       <script src="/owl.carousel.min.448aeb19.js"></script>
+      <script src="/setup.b1ae0ed0.js"></script>
 
    </body>
 </html>

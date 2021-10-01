@@ -5,7 +5,7 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <title>NETFRITAS</title>
-      <meta name="description" content="">
+      <meta name="description" content="Sua plataforma de streaming amigável. Feita para alegrar sua criança">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="./style/main.css">
       
@@ -21,6 +21,49 @@
       
    </head>
    <body>
+
+      <div class="popup hidden">
+
+         <div class="play">
+            <div class="thumb">
+               <i class="far fa-play-circle"></i>
+            </div>
+         </div>
+
+         <div class="container">
+
+            <h2 class="title"> Bob Esponja: Um herói fora d'água </h2>
+
+            <div class="buttons">
+
+               <div class="button">
+                  <i class="fas fa-plus-circle"></i> 
+                  <b>Adicionar à lista</b>
+               </div>
+
+               <div class="button" id="green">
+                  <i class="fas fa-smile-beam"></i>
+                  <b>Gostei</b>
+               </div>
+
+               <div class="button" id="red">
+                  <i class="fas fa-frown"></i> 
+                  <b>Não gostei</b>
+               </div>
+
+            </div>
+
+            <div>
+
+            <p class="description">
+               Elit ea elit ad deserunt. Lorem nulla Lorem excepteur minim dolor do officia in ullamco aliqua non. Laborum culpa culpa sit id consequat amet amet ipsum cupidatat duis. Aliquip officia mollit sit Lorem dolore sunt. Laborum exercitation adipisicing sunt magna amet cupidatat aute.
+            </p>
+
+         </div>
+
+         </div>
+
+      </div>
       
       <header>
 
@@ -69,7 +112,7 @@
             
                <div id="play">
                   <button role="button" class="btn btn-play"><i class="fas fa-play"></i> ASSISTIR</button>
-                  <button role="button" class="btn btn-info"><i class="fas fa-plus"></i> INFORMAÇÕES</button>
+                  <button role="button" onclick="popUp()" class="btn btn-info"><i class="fas fa-plus"></i> INFORMAÇÕES</button>
                </div>
 
             </div>

@@ -16,8 +16,17 @@ function scrollFade() {
 
 document.addEventListener("scroll", scrollFade)
 
-// Show temporary page on click
+// Show popUp on click
 
 function popUp() {
+   var container = $(".popup");;
    
+   $(container).removeClass("hidden");
+
+   $(document).mouseup(function(e) {
+
+      if (!container.is(e.target) && container.has(e.target).length === 0) {
+         container.addClass("hidden");
+      }
+   });
 }
