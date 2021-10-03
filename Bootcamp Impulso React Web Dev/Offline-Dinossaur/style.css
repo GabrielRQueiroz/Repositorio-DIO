@@ -1,0 +1,96 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   
+   overflow: hidden;
+}
+
+html, body {
+   width: 100%;
+   height: 100%;
+
+   background-color: #fafafa;
+}
+
+.points {
+   width: 100%;
+
+   margin-top: 20vh;
+
+   font-size: 1.5rem;
+   text-align: center;
+}
+
+.end {
+   height: 50%;
+   width: 100%;
+
+   font-size: 1.5rem;
+
+   display: flex;
+
+   flex-direction: column;
+
+   align-items: center;
+   justify-content: center;
+}
+
+.end::last-child {
+   font-size: .5rem;
+   opacity: .6;
+
+}
+
+.end h2 {
+   font-size: 3em;
+}
+
+.dino {
+   position: absolute;
+   bottom: 40vh;
+   left: 10vw;
+
+
+   width: 50px;
+   height: 50px;
+   
+   background-image: url(./images/dino.png);
+   background-size: cover;
+
+   transition: 100ms ease all;
+}
+
+.cactus {
+   position: absolute;
+   bottom: 40vh;
+
+   width: 50px;
+   height: 50px;
+
+   background-image: url(./images/cactus.png);
+   background-size: cover;
+
+   transition: 100ms ease all;
+}
+
+.background {
+   bottom: 40vh;
+
+   height: 97vh;
+   width: 100vw;
+
+   background-image: url(./images/background.png);
+   background-repeat: repeat-x;
+
+   animation: slideright 1000s infinite linear;
+}
+
+@keyframes slideright {
+   from {
+      background-position: 70000%;
+   }
+   to {
+      background-position: 0;
+   }
+}
