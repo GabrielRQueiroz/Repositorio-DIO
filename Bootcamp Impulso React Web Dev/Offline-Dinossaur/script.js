@@ -5,7 +5,7 @@ const start = document.querySelector('.start');
 start.classList.add('hidden'); 
 let started = false;
 let onGround = true;
-let position = 39;
+let position = 38;
 
 
 let score = 0;
@@ -29,12 +29,12 @@ function jump() {
 
    let upInterval = setInterval(() => {
 
-      if (position >= 54) {
+      if (position >= 53) {
          clearInterval(upInterval);
 
          let downInterval = setInterval(() => {
 
-            if (position <= 39) {
+            if (position <= 38) {
                clearInterval(downInterval);
                onGround = true;
 
