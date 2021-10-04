@@ -1,8 +1,12 @@
 const dino = document.querySelector('.dino');
 const background = document.querySelector('.background');
 const scoreScreen = document.querySelector('.points');
+const start = document.querySelector('.start');
+start.classList.add('hidden'); 
+let started = false;
 let onGround = true;
-let position = 40;
+let position = 39;
+
 
 let score = 0;
 
@@ -11,9 +15,7 @@ let points = setInterval(() => {
    scoreScreen.innerHTML = `Score: ${score.toFixed(0)} points`;
 }, 10);
 
-
-
-function handleKeyUp(event) {
+function handleKeyDown(event) {
    if (event.keyCode === 32 || event.keyCode === 38) {
       if (onGround) {
          jump();
@@ -27,12 +29,12 @@ function jump() {
 
    let upInterval = setInterval(() => {
 
-      if (position >= 55) {
+      if (position >= 54) {
          clearInterval(upInterval);
 
          let downInterval = setInterval(() => {
 
-            if (position <= 40) {
+            if (position <= 39) {
                clearInterval(downInterval);
                onGround = true;
 
@@ -42,7 +44,7 @@ function jump() {
 
             }
 
-         }, 120);
+         }, 100);
 
       } else {
          position += 15;
@@ -50,7 +52,7 @@ function jump() {
 
       }
 
-   }, 120);
+   }, 100);
 
 }
 
@@ -58,7 +60,7 @@ function createCactus() {
 
    const cactus = document.createElement('div');
    let cactusPosition = 110;
-   let randomTime = Math.random() * 4000;
+   let randomTime = (Math.random() + 5) ** 4;
 
    cactus.classList.add('cactus');
    cactus.style.left =  110 + "vw";
@@ -71,7 +73,7 @@ function createCactus() {
          clearInterval(leftInterval);
          background.removeChild(cactus);
          
-      } else if (cactusPosition > 0 && cactusPosition <= 10 && position < 45) { 
+      } else if (cactusPosition > 0 && cactusPosition <= 5 && position <= 39) {
          clearInterval(leftInterval);
          clearInterval(points);
          document.body.innerHTML = `<div class="end"> <h2> Game over </h2> <p> You scored ${score.toFixed(0)} points </p> <p> (Say goodbye to Dino ;-;) </p> </div>`;
@@ -90,4 +92,4 @@ function createCactus() {
 
 createCactus();
 
-document.addEventListener('keydown', handleKeyUp);
+document.addEventListener('keydown', handleKeyDown);
