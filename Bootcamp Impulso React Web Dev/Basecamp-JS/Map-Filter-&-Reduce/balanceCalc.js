@@ -24,5 +24,5 @@ function balanceCalc(availableBalance, list) {
    return list.reduce(function (prev, current, index) {
       return prev-current.price;
    }, availableBalance);
-
+}
 console.log(`${balanceCalc(availableBalance, list)}$ remaining`);
