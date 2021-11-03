@@ -14,8 +14,8 @@ const getCats = async () => {
    // }
 
    const data = await fetch(BASE_URL)
-      .then((res) => res.json())
-      .catch((e) => console.log(e));
+   .then((res) => res.json())
+   .catch((e) => console.log(e));
 
    return data.webpurl
 
@@ -25,7 +25,7 @@ const loadImage = async () => {
    const img = document.getElementById('cat');
    img.src = await getCats();
 
-}
+};
 
 btn.addEventListener('click', loadImage);
 
