@@ -1,2 +1,3 @@
-node-modules/
-dist/
+#dependencies
+/node_modules
+/dist
