@@ -28,7 +28,7 @@ authRoute.post(
 
 			const jwtPayload = { username: user.username };
 			const secretKey = 'my_secret_key';
-			const jwtOptions = { subject: user?.uuid };
+			const jwtOptions = { subject: user?.uuid, expiresIn: '1m' }; //
 
 			const jwt = JWT.sign(jwtPayload, secretKey, jwtOptions);
 
