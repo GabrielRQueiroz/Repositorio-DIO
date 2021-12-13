@@ -2,9 +2,7 @@
 /node_modules
 /dist
 
-/tsconfig.json
-/package-lock.json
-
+.env
 # order:
 # /token (post) -> staff:iAmStaff
 # /token/validate (token + Bearer)

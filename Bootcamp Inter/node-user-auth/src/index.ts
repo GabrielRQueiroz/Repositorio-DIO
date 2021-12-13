@@ -1,9 +1,11 @@
-import express, { NextFunction, Request, Response } from 'express';
+import { NextFunction, Request, Response } from 'express';
 import errorHandler from './middlewares/error-handler.middleware';
 import jwtAuthMiddleware from './middlewares/jwt-authentication.middleware';
 import authRoute from './routes/auth.route';
 import statusRoute from './routes/status.route';
 import usersRoute from './routes/users.route';
+
+let express = require('express');
 
 const app = express();
 
