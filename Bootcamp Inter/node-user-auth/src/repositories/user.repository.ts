@@ -1,4 +1,5 @@
 import db from '../db';
+import DatabaseError from '../models/errors/database.error.model';
 import User from '../models/user.model';
 
 class UserRepository {
@@ -15,19 +16,23 @@ class UserRepository {
 	}
 
 	async findById(uuid: string): Promise<User> {
-		const query = `
-         SELECT uuid, username
-         FROM application_user
-         WHERE uuid = $1
-      `;
-		// if WHERE uuid ${uuid}, there would be an exposure possibility by SQL injection, once the uuid would be into the actual code
+		try {
+			const query = `
+            SELECT uuid, username
+            FROM application_user
+            WHERE uuid = $1
+         `;
+			// if WHERE uuid ${uuid}, there would be an exposure possibility by SQL injection, once the uuid would be into the actual code
 
-		const values = [uuid];
+			const values = [uuid];
 
-		const { rows } = await db.query<User>(query, values);
-		const [user] = rows;
+			const { rows } = await db.query<User>(query, values);
+			const [user] = rows;
 
-		return user;
+			return user;
+		} catch (error) {
+			throw new DatabaseError('Erro na consulta por ID:', error);
+		}
 	}
 
 	async createUser(user: User): Promise<string> {
@@ -70,6 +75,27 @@ class UserRepository {
 
 		const values = [uuid];
 		await db.query(script, values);
+	}
+
+	async findUserByUsernameAndPassword(
+		username: string,
+		password: string
+	): Promise<User | null> {
+		try {
+			const query = `
+         SELECT uuid, username 
+         FROM application_user 
+         WHERE username = $1 
+         AND password = crypt($2, 'iAmYourPw')
+      `;
+
+			const values = [username, password];
+			const { rows } = await db.query<User>(query, values);
+			const [user] = rows;
+			return user || null;
+		} catch (error) {
+			throw new DatabaseError('Erro na identificação do usuário', error);
+		}
 	}
 }
 

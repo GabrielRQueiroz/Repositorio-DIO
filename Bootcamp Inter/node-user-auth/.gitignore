@@ -4,3 +4,8 @@
 
 /tsconfig.json
 /package-lock.json
+
+# order:
+# /token (post) -> staff:iAmStaff
+# /token/validate (token + Bearer)
+# Access :)

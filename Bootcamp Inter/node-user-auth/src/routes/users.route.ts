@@ -20,10 +20,15 @@ usersRoute.get(
 		res: Response,
 		next: NextFunction
 	) => {
-		const uuid = req.params.uuid;
-		const user = await userRepository.findById(uuid);
+		try {
+			const uuid = req.params.uuid;
 
-		res.status(StatusCodes.OK).send(user);
+			const user = await userRepository.findById(uuid);
+
+			res.status(StatusCodes.OK).send(user);
+		} catch (error) {
+			next(error);
+		}
 	}
 );
 
@@ -32,9 +37,7 @@ usersRoute.post(
 	async (req: Request, res: Response, next: NextFunction) => {
 		const newUser = req.body;
 
-		const uuid = await userRepository
-			.createUser(newUser)
-			.catch(console.error);
+		const uuid = await userRepository.createUser(newUser);
 
 		res.status(StatusCodes.CREATED).send(uuid);
 	}
