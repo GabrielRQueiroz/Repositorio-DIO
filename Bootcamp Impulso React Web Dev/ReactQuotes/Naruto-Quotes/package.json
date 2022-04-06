@@ -38,5 +38,10 @@
   },
   "devDependencies": {
     "@testing-library/react": "^11.2.5"
-  }
+  },
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

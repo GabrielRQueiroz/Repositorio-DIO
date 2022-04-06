@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Vanilla TicTacToe - DIO._</title>
+	</head>
+	<body>
+		<h1>TICTACTOE</h1>
+
+		<main>
+			<div class="square-container">
+				<div id="1" class="square" onclick="pickSquare(this.id)">-</div>
+				<div id="2" class="square" onclick="pickSquare(this.id)">-</div>
+				<div id="3" class="square" onclick="pickSquare(this.id)">-</div>
+			</div>
+
+			<div class="square-container">
+				<div id="4" class="square" onclick="pickSquare(this.id)">-</div>
+				<div id="5" class="square" onclick="pickSquare(this.id)">-</div>
+				<div id="6" class="square" onclick="pickSquare(this.id)">-</div>
+			</div>
+
+			<div class="square-container">
+				<div id="7" class="square" onclick="pickSquare(this.id)">-</div>
+				<div id="8" class="square" onclick="pickSquare(this.id)">-</div>
+				<div id="9" class="square" onclick="pickSquare(this.id)">-</div>
+			</div>
+		</main>
+
+		<section>
+			<div class="player">
+				<h2>Jogador atual</h2>
+				<label id="turn-of"> </label>
+			</div>
+
+			<div class="winner">
+				<h2>Vencedor:</h2>
+				<label id="winner"></label>
+			</div>
+		</section>
+
+		<div>
+			<button onclick="restart()">Reiniciar</button>
+		</div>
+
+		<script defer src="script.js"></script>
+	</body>
+</html>
